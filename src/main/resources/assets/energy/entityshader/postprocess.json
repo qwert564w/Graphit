@@ -1,0 +1,1 @@
+{"targets":["bufIn","bufMid","bufOut"],"passes":[{"name":"glow_h","intarget":"bufIn","outtarget":"bufMid","uniforms":[]},{"name":"default","intarget":"bufMid","outtarget":"bufOut","uniforms":[]}]}

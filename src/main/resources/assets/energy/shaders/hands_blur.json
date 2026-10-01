@@ -1,0 +1,56 @@
+{
+  "vertex": "energy:hands_blur",
+  "fragment": "energy:hands_blur",
+  "samplers": [
+    {
+      "name": "originalTexture",
+      "type": "sampler2D"
+    },
+    {
+      "name": "blurredTexture",
+      "type": "sampler2D"
+    }
+  ],
+  "uniforms": [
+    {
+      "name": "ModelViewMat",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1.0, 0.0, 0.0, 0.0,
+        0.0, 1.0, 0.0, 0.0,
+        0.0, 0.0, 1.0, 0.0,
+        0.0, 0.0, 0.0, 1.0
+      ]
+    },
+    {
+      "name": "ProjMat",
+      "type": "matrix4x4",
+      "count": 16,
+      "values": [
+        1.0, 0.0, 0.0, 0.0,
+        0.0, 1.0, 0.0, 0.0,
+        0.0, 0.0, 1.0, 0.0,
+        0.0, 0.0, 0.0, 1.0
+      ]
+    },
+    {
+      "name": "multiplier",
+      "type": "float",
+      "count": 4,
+      "values": [1.0, 1.0, 1.0, 1.0]
+    },
+    {
+      "name": "viewOffset",
+      "type": "float",
+      "count": 2,
+      "values": [0.0, 0.0]
+    },
+    {
+      "name": "resolution",
+      "type": "float",
+      "count": 2,
+      "values": [1.0, 1.0]
+    }
+  ]
+}

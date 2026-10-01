@@ -1,0 +1,14 @@
+{
+  "vertex": "energy:hands_texture",
+  "fragment": "energy:hands_mask_diff",
+  "samplers": [
+    { "name": "Sampler0", "type": "sampler2D" },
+    { "name": "Sampler1", "type": "sampler2D" },
+    { "name": "Sampler2", "type": "sampler2D" },
+    { "name": "Sampler3", "type": "sampler2D" }
+  ],
+  "uniforms": [
+    { "name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [1.0,0.0,0.0,0.0, 0.0,1.0,0.0,0.0, 0.0,0.0,1.0,0.0, 0.0,0.0,0.0,1.0] },
+    { "name": "ProjMat",      "type": "matrix4x4", "count": 16, "values": [1.0,0.0,0.0,0.0, 0.0,1.0,0.0,0.0, 0.0,0.0,1.0,0.0, 0.0,0.0,0.0,1.0] }
+  ]
+}

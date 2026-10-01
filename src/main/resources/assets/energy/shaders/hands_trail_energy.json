@@ -1,0 +1,20 @@
+{
+  "vertex": "energy:hands_texture",
+  "fragment": "energy:hands_trail_energy",
+  "samplers": [
+    { "name": "Sampler0", "type": "sampler2D" }
+  ],
+  "uniforms": [
+    { "name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [1.0,0.0,0.0,0.0, 0.0,1.0,0.0,0.0, 0.0,0.0,1.0,0.0, 0.0,0.0,0.0,1.0] },
+    { "name": "ProjMat",      "type": "matrix4x4", "count": 16, "values": [1.0,0.0,0.0,0.0, 0.0,1.0,0.0,0.0, 0.0,0.0,1.0,0.0, 0.0,0.0,0.0,1.0] },
+    { "name": "color",      "type": "float", "count": 3, "values": [0.35, 1.0, 0.35] },
+    { "name": "color2",     "type": "float", "count": 3, "values": [0.1, 0.75, 0.25] },
+    { "name": "exposure",   "type": "float", "count": 1, "values": [2.0] },
+    { "name": "autoColor",  "type": "float", "count": 1, "values": [0.0] },
+    { "name": "saturation", "type": "float", "count": 1, "values": [1.4] },
+    { "name": "intensity",  "type": "float", "count": 1, "values": [1.8] },
+    { "name": "core",       "type": "float", "count": 1, "values": [0.6] },
+    { "name": "pulse",      "type": "float", "count": 1, "values": [0.25] },
+    { "name": "time",       "type": "float", "count": 1, "values": [0.0] }
+  ]
+}

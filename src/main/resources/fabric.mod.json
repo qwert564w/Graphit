@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "energy",
+  "version": "1.0.0",
+  "name": "Energy Client",
+  "description": "Deobfuscated Energy Client for Minecraft 1.21.11 Fabric",
+  "authors": [
+    "Energy"
+  ],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "su.energyclient.EnergyClient"
+    ]
+  },
+  "mixins": [
+    "energy.mixins.json",
+    "cosmetics.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.1",
+    "fabric-api": "*",
+    "minecraft": "1.21.11"
+  },
+  "accessWidener": "energy.accesswidener"
+}

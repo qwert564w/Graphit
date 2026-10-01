@@ -1,0 +1,23 @@
+{
+  "vertex": "energy:fog_blur_quad",
+  "fragment": "energy:dead_internet",
+  "samplers": [
+    { "name": "Tex0", "type": "sampler2D" }
+  ],
+  "uniforms": [
+    { "name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ] },
+    { "name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ] },
+    { "name": "Resolution", "type": "float", "count": 2, "values": [ 1.0, 1.0 ] },
+    { "name": "Time", "type": "float", "count": 1, "values": [ 0.0 ] },
+    { "name": "Intensity", "type": "float", "count": 1, "values": [ 0.78 ] },
+    { "name": "VirtualHeight", "type": "float", "count": 1, "values": [ 360.0 ] },
+    { "name": "Glitch", "type": "float", "count": 1, "values": [ 0.38 ] },
+    { "name": "Chroma", "type": "float", "count": 1, "values": [ 0.55 ] },
+    { "name": "Exposure", "type": "float", "count": 1, "values": [ 0.65 ] },
+    { "name": "Disturbance", "type": "float", "count": 1, "values": [ 0.0 ] },
+    { "name": "Seed", "type": "float", "count": 1, "values": [ 17.0 ] },
+    { "name": "Preset", "type": "int", "count": 1, "values": [ 0 ] },
+    { "name": "Scanlines", "type": "int", "count": 1, "values": [ 1 ] },
+    { "name": "PacketLoss", "type": "int", "count": 1, "values": [ 1 ] }
+  ]
+}

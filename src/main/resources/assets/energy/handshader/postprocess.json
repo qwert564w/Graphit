@@ -1,0 +1,14 @@
+{
+  "targets": [
+    "bufIn",
+    "bufOut"
+  ],
+  "passes": [
+    {
+      "name": "hands_blur_post",
+      "intarget": "bufIn",
+      "outtarget": "bufOut",
+      "uniforms": []
+    }
+  ]
+}

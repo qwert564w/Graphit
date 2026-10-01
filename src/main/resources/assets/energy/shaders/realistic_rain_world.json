@@ -1,0 +1,32 @@
+{
+  "vertex": "energy:fog_blur_quad",
+  "fragment": "energy:realistic_rain_world",
+  "samplers": [
+    { "name": "SceneSampler", "type": "sampler2D" },
+    { "name": "DepthSampler", "type": "sampler2D" },
+    { "name": "ExposureSampler", "type": "sampler2D" }
+  ],
+  "uniforms": [
+    { "name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ] },
+    { "name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ] },
+    { "name": "InvViewMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ] },
+    { "name": "InvProjMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ] },
+    { "name": "Resolution", "type": "float", "count": 2, "values": [ 1.0, 1.0 ] },
+    { "name": "CameraPos", "type": "float", "count": 3, "values": [ 0.0, 0.0, 0.0 ] },
+    { "name": "PatternOrigin", "type": "float", "count": 2, "values": [ 0.0, 0.0 ] },
+    { "name": "ExposureCameraOffset", "type": "float", "count": 2, "values": [ 32.0, 32.0 ] },
+    { "name": "ExposureMapSize", "type": "float", "count": 1, "values": [ 64.0 ] },
+    { "name": "CameraHeight", "type": "float", "count": 1, "values": [ 64.0 ] },
+    { "name": "Time", "type": "float", "count": 1, "values": [ 0.0 ] },
+    { "name": "RainStrength", "type": "float", "count": 1, "values": [ 1.0 ] },
+    { "name": "Wetness", "type": "float", "count": 1, "values": [ 1.0 ] },
+    { "name": "PuddleAmount", "type": "float", "count": 1, "values": [ 0.7 ] },
+    { "name": "ReflectionStrength", "type": "float", "count": 1, "values": [ 0.65 ] },
+    { "name": "RippleStrength", "type": "float", "count": 1, "values": [ 1.0 ] },
+    { "name": "Wind", "type": "float", "count": 2, "values": [ 0.0, 0.0 ] },
+    { "name": "Lightning", "type": "float", "count": 1, "values": [ 0.0 ] },
+    { "name": "LightningAge", "type": "float", "count": 1, "values": [ 99.0 ] },
+    { "name": "Preset", "type": "int", "count": 1, "values": [ 0 ] },
+    { "name": "Quality", "type": "int", "count": 1, "values": [ 0 ] }
+  ]
+}

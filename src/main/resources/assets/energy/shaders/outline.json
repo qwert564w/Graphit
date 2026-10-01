@@ -1,0 +1,66 @@
+{
+    "vertex": "energy:outline",
+    "fragment": "energy:outline",
+    "uniforms": [
+        {
+            "name": "ModelViewMat",
+            "type": "matrix4x4",
+            "count": 16,
+            "values": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+        },
+        {
+            "name": "ProjMat",
+            "type": "matrix4x4",
+            "count": 16,
+            "values": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0]
+        },
+        {
+            "name": "u_size",
+            "type": "float",
+            "count": 2,
+            "values": [0.0, 0.0]
+        },
+        {
+            "name": "u_radius",
+            "type": "float",
+            "count": 1,
+            "values": [0.0]
+        },
+        {
+            "name": "u_border_size",
+            "type": "float",
+            "count": 1,
+            "values": [0.0]
+        },
+        {
+            "name": "u_alpha",
+            "type": "float",
+            "count": 1,
+            "values": [0.0]
+        },
+        {
+            "name": "u_color_1",
+            "type": "float",
+            "count": 3,
+            "values": [1.0, 0.0, 0.0]
+        },
+        {
+            "name": "u_color_2",
+            "type": "float",
+            "count": 3,
+            "values": [0.0, 0.0, 0.0]
+        },
+        {
+            "name": "u_color_3",
+            "type": "float",
+            "count": 3,
+            "values": [0.0, 0.0, 0.0]
+        },
+        {
+            "name": "u_color_4",
+            "type": "float",
+            "count": 3,
+            "values": [0.0, 0.0, 0.0]
+        }
+    ]
+}

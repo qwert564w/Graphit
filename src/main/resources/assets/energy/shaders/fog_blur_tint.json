@@ -1,0 +1,17 @@
+{
+  "vertex": "energy:fog_blur_quad",
+  "fragment": "energy:fog_blur_tint",
+  "samplers": [
+    { "name": "Tex0", "type": "sampler2D" }
+  ],
+  "uniforms": [
+    { "name": "ModelViewMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ] },
+    { "name": "ProjMat", "type": "matrix4x4", "count": 16, "values": [ 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0 ] },
+    { "name": "RGBPuke", "type": "int", "count": 1, "values": [ 0 ] },
+    { "name": "SV", "type": "float", "count": 2, "values": [ 1.0, 1.0 ] },
+    { "name": "Opacity", "type": "float", "count": 1, "values": [ 0.0 ] },
+    { "name": "Time", "type": "float", "count": 1, "values": [ 0.0 ] },
+    { "name": "Yaw", "type": "float", "count": 1, "values": [ 0.0 ] },
+    { "name": "Pitch", "type": "float", "count": 1, "values": [ 0.0 ] }
+  ]
+}
