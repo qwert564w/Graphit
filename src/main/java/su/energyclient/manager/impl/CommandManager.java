@@ -7,7 +7,6 @@ import net.minecraft.command.CommandSource;
 import net.minecraft.command.permission.PermissionPredicate;
 import su.energyclient.QuickImports;
 import su.energyclient.command.Command;
-import su.energyclient.command.impl.BaritoneCommand;
 import su.energyclient.command.impl.BindCommand;
 import su.energyclient.command.impl.CloudConfigCommand;
 import su.energyclient.command.impl.ConfigCommand;
@@ -48,7 +47,6 @@ public class CommandManager extends Manager<Command> implements QuickImports {
       this.O(new JoinCommand());
       this.O(new TeleportCommand());
       this.O(new CloudConfigCommand());
-      this.O(new BaritoneCommand());
       this.O(new PanicCommand());
       this.O(new SelfCommand());
       this.O(new InventoryCommand());
