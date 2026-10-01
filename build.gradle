@@ -28,7 +28,7 @@ dependencies {
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // Local extracted mod dependencies
-    modImplementation files('libs/baritone-api-fabric-1.17.0-dirty.jar')
+    // baritone removed
     modImplementation files('libs/in-game-account-switcher-oSzaukGT.jar')
     modImplementation files('libs/nether-pathfinder-1.6.jar')
     implementation files('libs/discord-rpc-1.0.4.jar')
