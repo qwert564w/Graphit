@@ -8,7 +8,6 @@ import net.minecraft.client.render.FrameGraphBuilder;
 import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.client.render.WorldRenderer;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.client.util.memory.ObjectAllocator;
 import net.minecraft.util.profiler.Profilers;
 import org.joml.Matrix4f;
 import org.joml.Vector4f;
@@ -40,7 +39,7 @@ public abstract class WorldRendererMixin {
       at = {@At("RETURN")}
    )
    private void render(
-      ObjectAllocator var1,
+      Object var1,
       RenderTickCounter var2,
       boolean var3,
       Camera var4,
