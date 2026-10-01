@@ -25,7 +25,6 @@ import su.energyclient.util.Util60;
 import su.energyclient.util.Util71;
 import su.energyclient.util.Util90;
 import su.energyclient.util.Util93;
-import su.energyclient.util.Util95;
 import pulse.cosmetic.LocalCosmetics;
 
 public class EnergyClient implements QuickImports, ClientModInitializer {
@@ -54,7 +53,6 @@ public class EnergyClient implements QuickImports, ClientModInitializer {
       this.f_1625 = new ThemeEditor();
       new Util2();
       new Util60();
-      new Util95();
       Util120.m_2406();
       try {
          LocalCosmetics.selectDefault();
