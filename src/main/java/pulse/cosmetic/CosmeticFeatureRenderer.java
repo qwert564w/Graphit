@@ -24,7 +24,6 @@ public class CosmeticFeatureRenderer extends FeatureRenderer<PlayerEntityRenderS
         super(context);
     }
 
-    @Override
     public void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light,
                        PlayerEntityRenderState state, float limbAngle, float limbDistance) {
         MinecraftClient client = MinecraftClient.getInstance();
@@ -55,7 +54,7 @@ public class CosmeticFeatureRenderer extends FeatureRenderer<PlayerEntityRenderS
                 continue;
             }
             Identifier tex = cosmetic.getTextureId();
-            RenderLayer layer = RenderLayer.getEntityCutoutNoCull(tex);
+            RenderLayer layer = RenderLayer.getEntityCutout(tex);
             VertexConsumer vc = vertexConsumers.getBuffer(layer);
             matrices.push();
             try {
