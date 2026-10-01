@@ -33,3 +33,19 @@ jobs:
         with:
           name: energy-client-jar
           path: build/libs/*.jar
+
+      - name: Upload to Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          JAR_PATH=$(ls build/libs/energy-1.0.0.jar || ls build/libs/energy-1.0.0+*.jar | head -n 1)
+          if [ -f "$JAR_PATH" ]; then
+            curl -X POST \
+              -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Content-Type: application/java-archive" \
+              --data-binary "@$JAR_PATH" \
+              "https://uploads.github.com/repos/qwert564w/Graphit/releases/401370633/assets?name=energy-1.0.0.jar"
+          else
+            echo "JAR not found!"
+            exit 1
+          fi
