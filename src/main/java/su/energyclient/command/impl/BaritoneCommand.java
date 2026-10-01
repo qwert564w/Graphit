@@ -40,10 +40,13 @@ public class BaritoneCommand extends Command implements QuickImports {
       var1.executes(this::m_4043);
       var1.then(m_2219(f_2385, StringArgumentType.greedyString()).executes(var1x -> {
          String var2 = (String)var1x.getArgument(f_2386, String.class);
-         if (!Util95.m_3639(var2)) {
-            this.m_3196("Baritone не знает команду \"" + var2 + "\"");
+         try {
+            if (!Util95.m_3639(var2)) {
+               this.m_3196("Baritone не знает команду \"" + var2 + "\"");
+            }
+         } catch (Throwable t) {
+            this.m_3196("Ошибка Baritone: " + t.getMessage());
          }
-
          return 1;
       }));
    }

@@ -84,7 +84,7 @@ public class RenderUtil29 extends Screen implements QuickImports {
    }
 
    private ItemStack getStackForSlot(int var1) {
-      ArmorManager var2 = InitManager.f_2740.f_2746;
+      ArmorManager var2 = (InitManager.f_2740 != null) ? InitManager.f_2740.f_2746 : null;
       return var2 == null ? ItemStack.EMPTY : var2.m_987(var1);
    }
 
@@ -96,7 +96,7 @@ public class RenderUtil29 extends Screen implements QuickImports {
       float var9 = f_1106;
       double var10 = f_1107;
       double var12 = var7 * (1.0 - var10) / f_1108;
-      ArmorManager var14 = InitManager.f_2740.f_2746;
+      ArmorManager var14 = (InitManager.f_2740 != null) ? InitManager.f_2740.f_2746 : null;
       int var15 = var14 != null ? var14.m_2248() : -1;
 
       for (int var16 = 0; var16 < 3; var16++) {
@@ -144,7 +144,7 @@ public class RenderUtil29 extends Screen implements QuickImports {
       Util114.m_3784(RenderUtil7.f_13885);
       Matrix4f var15 = Util7.m_1924(var1.getMatrices());
       BufferBuilder var16 = Tessellator.getInstance().begin(DrawMode.TRIANGLE_STRIP, VertexFormats.POSITION_COLOR);
-      short var17 = 360;
+      int var17 = 180; // reduced from 360 for weak PCs
       double var18 = (var8 - var6) / var17;
 
       for (int var20 = 0; var20 <= var17; var20++) {
@@ -178,11 +178,11 @@ public class RenderUtil29 extends Screen implements QuickImports {
       Util114.m_1481();
       Util114.m_542();
       Util114.m_3784(RenderUtil7.f_13885);
-      GL11.glEnable(2848);
-      GL11.glHint(3154, 4354);
+      // GL11.glEnable(2848); // disabled for weak PCs
+      // GL11.glHint(3154, 4354);
       Matrix4f var15 = Util7.m_1924(var1.getMatrices());
       BufferBuilder var16 = Tessellator.getInstance().begin(DrawMode.DEBUG_LINES, VertexFormats.POSITION_COLOR);
-      short var17 = 360;
+      int var17 = 180; // reduced from 360 for weak PCs
       double var18 = (var8 - var6) / var17;
 
       for (int var20 = 0; var20 < var17; var20++) {
@@ -223,7 +223,7 @@ public class RenderUtil29 extends Screen implements QuickImports {
       var16.vertex(var15, var43, var44, 0.0F).color(var11, var12, var13, var14);
       var16.vertex(var15, var45, var46, 0.0F).color(var11, var12, var13, var14);
       RenderUtil12.I(var16.end());
-      GL11.glDisable(2848);
+      // GL11.glDisable(2848);
       Util114.m_963();
    }
 
@@ -242,7 +242,7 @@ public class RenderUtil29 extends Screen implements QuickImports {
       if (this.f_1102 < 0) {
          return super.mouseClicked(var1, var2);
       } else {
-         ArmorManager var8 = InitManager.f_2740.f_2746;
+         ArmorManager var8 = (InitManager.f_2740 != null) ? InitManager.f_2740.f_2746 : null;
          if (var7 == 0) {
             ItemStack var9 = this.getStackForSlot(this.f_1102);
             if (var9.isEmpty()) {
@@ -281,7 +281,7 @@ public class RenderUtil29 extends Screen implements QuickImports {
 
    private void selectHoveredSlot() {
       if (this.f_1102 >= 0) {
-         ArmorManager var1 = InitManager.f_2740.f_2746;
+         ArmorManager var1 = (InitManager.f_2740 != null) ? InitManager.f_2740.f_2746 : null;
          if (var1 != null) {
             var1.m_2090(this.f_1102);
          }

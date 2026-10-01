@@ -40,7 +40,14 @@ public class KeyboardMixin {
                && QuickImports.f_5909.currentScreen == null
                && QuickImports.f_5909.player != null
                && QuickImports.f_5909.world != null) {
-               QuickImports.f_5909.setScreen(EnergyClient.f_1622.f_1625);
+               try {
+                  if (EnergyClient.f_1622 != null && EnergyClient.f_1622.f_1625 != null) {
+                     QuickImports.f_5909.setScreen(EnergyClient.f_1622.f_1625);
+                  }
+               } catch (Throwable t) {
+                  System.err.println("[EnergyClient] Failed to open GUI: " + t.getMessage());
+                  t.printStackTrace();
+               }
             }
          } else if (var3 == 0) {
             Boolean var8 = keyScreenStates.remove(var6);

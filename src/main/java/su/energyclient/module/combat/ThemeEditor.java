@@ -126,6 +126,8 @@ public class ThemeEditor extends Screen implements QuickImports {
    private List<Module> f_9466;
    private Category f_9467;
    private String f_9468;
+   private Util28 f_frameCache;
+   private List<Module> f_frameCacheModules;
    private static final String f_9469 = "gui";
    private static final float f_9470 = 416.0F;
    private static final float f_9471 = 272.0F;
@@ -1263,6 +1265,7 @@ public class ThemeEditor extends Screen implements QuickImports {
       } else if (this.f_9466 != null && this.f_9467 == this.f_9425 && this.f_9449.equals(this.f_9468)) {
          return this.f_9466;
       } else {
+         if (InitManager.f_2740 == null || InitManager.f_2740.f_2741 == null) return List.of();
          Stream<Module> var1 = InitManager.f_2740.f_2741.m_3515().stream();
          if (this.f_9449.isEmpty()) {
             var1 = var1.filter(var1x -> var1x.m_2409() == this.f_9425);
@@ -1792,7 +1795,13 @@ public class ThemeEditor extends Screen implements QuickImports {
    }
 
    private Util28 buildFrameCache() {
-      return Util28.m_468(this.getFilteredModules());
+      List<Module> modules = this.getFilteredModules();
+      if (this.f_frameCache != null && this.f_frameCacheModules == modules) {
+         return this.f_frameCache;
+      }
+      this.f_frameCache = Util28.m_468(modules);
+      this.f_frameCacheModules = modules;
+      return this.f_frameCache;
    }
 
    private ThemeEditor.iOgAfy2mLF6S7jpm getModuleEntryTransform(int var1, boolean var2, float var3, float var4) {
