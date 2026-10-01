@@ -48,7 +48,6 @@ public class CosmeticsScreen extends Screen {
         return true;
     }
 
-    @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
         if (button == 0) {
             int listTop = 40;
@@ -64,7 +63,7 @@ public class CosmeticsScreen extends Screen {
                 }
             }
         }
-        return super.mouseClicked(mouseX, mouseY, button);
+        return false;
     }
 
     @Override
