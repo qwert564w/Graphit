@@ -19,11 +19,11 @@ jobs:
           java-version: '25'
           distribution: 'temurin'
           
-      - name: Download Gradle 9.3
+      - name: Download Gradle 9.3.1
         run: |
-          wget -q https://services.gradle.org/distributions/gradle-9.3-bin.zip -O gradle.zip
+          wget -q https://services.gradle.org/distributions/gradle-9.3.1-bin.zip -O gradle.zip
           unzip -q gradle.zip
-          echo "$PWD/gradle-9.3/bin" >> $GITHUB_PATH
+          echo "$PWD/gradle-9.3.1/bin" >> $GITHUB_PATH
           
       - name: Build with Gradle
         run: gradle build --no-daemon
